@@ -1,18 +1,23 @@
 package guru.springframework.controllers;
 
-import guru.springframework.services.GreetingServiceImpl;
+import guru.springframework.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
 
 
-/**
- * Created by jt on 5/24/17.
- */
-
+@Controller
 public class PropertyInjectedController {
 
-    public GreetingServiceImpl greetingService;
+    // Property Injection - NOT recommended, uses costly reflection
+    // Spring uses both property Class AND Name to resolve deps
+    //  will use reflection to resolve
+    @Autowired
+    @Qualifier("propertyGreetingService")
+    public GreetingService greetingServiceImpl;
 
     public String sayHello(){
-        return greetingService.sayGreeting();
+        return "PropertyInjectedController " + greetingServiceImpl.sayGreeting();
     }
 
 }
