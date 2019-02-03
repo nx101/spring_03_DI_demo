@@ -12,7 +12,7 @@ import javax.annotation.PreDestroy;
 // Demo bean lifecycle - simple msg for each interface
 
 /**
- * Runtime Order:
+ * __ Runtime Order:
  * ## I'm in the LifeCycleBean Constructor
  * ## My Bean Name is: lifeCycleDemoBean
  * ## Bean Factory has been set
