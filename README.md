@@ -1,4 +1,5 @@
-# Demo - Spring Dependency Injection and Bean lifecycle
+# Summary
+Demo of Spring Dependency Injection and Bean lifecycle
 
 # Overview
 Section | Keywords
