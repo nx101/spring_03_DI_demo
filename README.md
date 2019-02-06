@@ -1,3 +1,10 @@
-This repository is for an example application built in my Spring Framework 5 - Beginner to Guru
+# Summary
+Demo of Spring Dependency Injection and Bean lifecycle
 
-You can learn about my Spring Framework 5 Online course [here.](https://go.springframework.guru/spring-framework-5-online-course)
+# Overview
+Section | Keywords
+------------ | -------------
+Dependency Injection | @Autowired @Qualifier @Primary @Profile
+Spring Bean Lifecycle | Callback Interfaces, 'Aware' Interfaces, Annotaions, PostProcessors
+
+<Spring course http://springframework.guru>
