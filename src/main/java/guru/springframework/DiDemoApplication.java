@@ -5,6 +5,7 @@ import guru.springframework.controllers.PrimaryConstructorInjectedController;
 import guru.springframework.controllers.PropertyInjectedController;
 import guru.springframework.controllers.SetterInjectedController;
 import guru.springframework.morebeans.FakeDataSource;
+import guru.springframework.morebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -23,7 +24,7 @@ public class DiDemoApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 
-        // dependencyInjectionDemo(ctx);
+        dependencyInjectionDemo(ctx);
 
         externalPropertiesDemo(ctx);
 
@@ -50,6 +51,10 @@ public class DiDemoApplication {
 
         FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
         System.out.printf("Property check on FakeDataSource.username: %s\n", fakeDataSource.getUser());
+
+        FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+        System.out.printf("Property check on FakeJmsBroker.username: %s\n", fakeJmsBroker.getUser());
+
 
     }
 
