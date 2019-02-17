@@ -35,8 +35,10 @@ import javax.annotation.PreDestroy;
 public class LifeCycleDemoBean implements InitializingBean, DisposableBean, BeanNameAware,
         BeanFactoryAware, ApplicationContextAware{
 
+    private final String TAG = "     LifeCycleDemo: ";
+
     public LifeCycleDemoBean() {
-        System.out.println("## I'm in the LifeCycleBean Constructor");
+        System.out.println(TAG+"## I'm in the LifeCycleBean Constructor");
     }
 
 
@@ -44,13 +46,13 @@ public class LifeCycleDemoBean implements InitializingBean, DisposableBean, Bean
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("## The LifeCycleBean has its properties set!");
+        System.out.println(TAG+"## The LifeCycleBean has its properties set!");
 
     }
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("## The Lifecycle bean has been terminated");
+        System.out.println(TAG+"## The Lifecycle bean has been terminated");
 
     }
 
@@ -59,18 +61,18 @@ public class LifeCycleDemoBean implements InitializingBean, DisposableBean, Bean
 
     @Override
     public void setBeanName(String name) {
-        System.out.println("## My Bean Name is: " + name);
+        System.out.println(TAG+"## My Bean Name is: " + name);
 
     }
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("## Bean Factory has been set");
+        System.out.println(TAG+"## Bean Factory has been set");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("## Application context has been set");
+        System.out.println(TAG+"## Application context has been set");
     }
 
 
@@ -78,22 +80,22 @@ public class LifeCycleDemoBean implements InitializingBean, DisposableBean, Bean
 
     @PostConstruct
     public void postConstruct(){
-        System.out.println("## The Post Construct annotated method has been called");
+        System.out.println(TAG+"## The Post Construct annotated method has been called");
     }
 
     @PreDestroy
     public void preDestroy() {
-        System.out.println("## The Predestroy annotated method has been called");
+        System.out.println(TAG+"## The Predestroy annotated method has been called");
     }
 
 
     // By Bean Post Processor - see CustomBeanPostProcessor implements BeanPostProcessor
 
     public void beforeInit(){
-        System.out.println("## - Before Init - Called by Bean Post Processor");
+        System.out.println(TAG+"## - Before Init - Called by Bean Post Processor");
     }
 
     public void afterInit(){
-        System.out.println("## - After init called by Bean Post Processor");
+        System.out.println(TAG+"## - After init called by Bean Post Processor");
     }
 }

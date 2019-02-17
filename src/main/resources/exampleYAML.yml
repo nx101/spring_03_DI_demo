@@ -1,0 +1,35 @@
+# a comment
+
+property_name: Name
+
+names_array:
+  - Luke # 2 spaces gap!
+  - Leah
+  - Vader
+
+some_with_quotes: "#"
+
+lightsaber:
+  color: crimson red
+  alignment: dark side
+  damage: 885
+
+a_boolean: yes
+another_bool: True
+yet_another_bool: true
+
+string_val: "gotta put the line in quotes"
+
+string_with_colon: "jelly : is nice"
+
+string_with_newlines_use_pipe: |
+  cat in the hat
+  it wasn't so fat
+  and another line
+
+
+string_ignore_newlines_use_>: >
+  this is a bat
+  he has a new hat
+  but these lines will not have line breaks
+

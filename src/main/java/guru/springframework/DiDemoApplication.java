@@ -29,6 +29,7 @@ public class DiDemoApplication {
         externalPropertiesDemo(ctx);
 
 
+
     }
 
 
@@ -49,11 +50,17 @@ public class DiDemoApplication {
 
     public static void externalPropertiesDemo(ApplicationContext ctx) {
 
+        // Using Property files - /resources/xx.properties and PropertyConfig
+
+        final String TAG = "  ExternalPropertyDemo: ";
+
         FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
-        System.out.printf("Property check on FakeDataSource.username: %s\n", fakeDataSource.getUser());
+        System.out.printf(TAG+"Property check on FakeDataSource.username: %s\n", fakeDataSource.getUser());
 
         FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
-        System.out.printf("Property check on FakeJmsBroker.username: %s\n", fakeJmsBroker.getUser());
+        System.out.printf(TAG+"Property check on FakeJmsBroker.username: %s\n", fakeJmsBroker.getUser());
+
+
 
 
     }

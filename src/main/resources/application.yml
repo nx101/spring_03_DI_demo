@@ -1,0 +1,13 @@
+rvlt:
+  jms:
+    username: T800
+    password: Skynet
+    url: i will be back
+
+---
+
+spring:
+  profiles: es
+rvlt:
+  jms:
+    username: T800 remains T800 in Es too!
